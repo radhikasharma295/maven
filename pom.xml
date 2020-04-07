@@ -27,14 +27,14 @@
   </build>
    <distributionManagement>
         <repository>
-            <id>deployment</id>
+            <id>chennai</id>
             <name>Internal Releases</name>
-            <url>http://10.128.0.10:8081/repository/student-rel/</url>
+            <url>http://18.191.171.249:8081/repository/radhika-release/</url>
         </repository>
         <snapshotRepository>
-            <id>deployment</id>
+            <id>chennai</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://10.128.0.10:8081/repository/student-snap/</url>
+            <url>http://18.191.171.249:8081/repository/radhika-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
   <dependencies>

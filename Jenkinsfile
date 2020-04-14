@@ -8,7 +8,7 @@ pipeline{
       }
       stage('varibledef'){
        steps {
-        def name=radhika
+         name=`radhika`
          echo "hi my name is ${name}"
        }
       }

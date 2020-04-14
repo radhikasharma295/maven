@@ -6,9 +6,10 @@ pipeline{
         echo "radhika"
        }
       }
-      stage('maven build'){
+      stage('varibledef'){
        steps {
-        sh label: '', script: 'mvn clean package'
+        def_name=radhika
+         echo "hi my name is ${name}"
        }
       }
     }

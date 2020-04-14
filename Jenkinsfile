@@ -1,4 +1,5 @@
-def name = "radhika" 
+def name = "radhika"
+def address = "chennai"
 pipeline{
   agent any
     stages{
@@ -9,8 +10,7 @@ pipeline{
       }
       stage('varibledef'){
         steps {
-          def address = "chennai" ;
-         echo "hi my name is ${name} and address is ${address}"
+           echo "hi my name is ${name} and address is ${address}"
        }
       }
     }

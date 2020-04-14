@@ -8,8 +8,8 @@ pipeline{
        }
       }
       stage('varibledef'){
-        address = "chennai"
-       steps {
+        steps {
+          def address = "chennai" ;;
          echo "hi my name is ${name} and address is ${address}"
        }
       }

@@ -1,9 +1,16 @@
+def name = sai
+def surname = sharma
 pipeline{
   agent any
     stages{
        stage("hello"){
           steps{
            echo "hi"
+          }
+       }
+       stage("variable"){
+          steps{
+           echo "name is ${name} and address is ${surname}"
           }
        }
     }

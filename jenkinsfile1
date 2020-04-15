@@ -15,8 +15,8 @@ pipeline{
           }
        }
        stage("reading pom"){
-          steps{
-            readpom = readMavenPom file: 'pom.xml'
+           readpom = readMavenPom file: 'pom.xml'
+           steps {
             echo "the version is ${readpom.version}"
           }
        }

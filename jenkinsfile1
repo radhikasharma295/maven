@@ -4,7 +4,7 @@ def surname = "sharma"
 pipeline{
   agent any
   environment{
-       VERSION = readMavenPom().getversion()
+       VERSION = readMavenPom().getVersion()
    }
     stages{
        stage("hello"){

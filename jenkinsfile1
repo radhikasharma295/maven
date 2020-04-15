@@ -1,5 +1,6 @@
 def name = "sai"
 def surname = "sharma"
+def readpom;
 pipeline{
   agent any
     stages{
@@ -11,6 +12,13 @@ pipeline{
        stage("variable"){
           steps{
            echo "name is ${name} and address is ${surname}"
+          }
+       }
+       stage("reading pom"){
+          steps{
+           readpom=readMavenPom file: '';
+           def version = readpom.version;
+           echo "${version}"
           }
        }
     }

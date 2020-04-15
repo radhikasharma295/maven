@@ -1,6 +1,6 @@
 def name = "sai"
 def surname = "sharma"
-def readpom = readMavenPom 'pom.xml'
+def readpom = readMavenPom file: 'pom.xml'
 pipeline{
   agent any
     stages{

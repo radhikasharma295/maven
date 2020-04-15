@@ -1,5 +1,5 @@
-def name = sai
-def surname = sharma
+def name = "sai"
+def surname = "sharma"
 pipeline{
   agent any
     stages{

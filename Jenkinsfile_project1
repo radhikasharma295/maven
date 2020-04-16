@@ -3,4 +3,11 @@ pipeline{
       tools {
       tool name: 'maven3', type: 'maven'
       }
+      stages{
+        stage (hello){
+           steps{
+               echo "this is radhika"
+           }
+        }
+     }
 }

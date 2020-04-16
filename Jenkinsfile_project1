@@ -1,4 +1,6 @@
 pipeline{
-   agent {label slave}
-      tools
+   agent {label slave1}
+      tools {
+      tool name: 'maven3', type: 'maven'
+      }
 }

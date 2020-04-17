@@ -1,6 +1,6 @@
 pipeline{
    agent {label 'slave1'}
-    tools {  
+    envirnment {  
     PATH=/home/ec2-user/apache-maven-3.6.3/bin:$PATH
     }
       stages{

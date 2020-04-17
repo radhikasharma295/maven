@@ -9,5 +9,10 @@ pipeline{
                echo "this is radhika"
            }
         }
+       stage (maven){
+           steps{
+               sh label: '', script: 'mvn clean install package'
+           }
+        }
      }
 }

@@ -2,7 +2,7 @@ pipeline{
   agent any
     environment {
        pom_version = readMavenPom().getVersion()
-       pom_artifact = readMavenPom().getartifactId()
+       pom_artifact = readMavenPom().getArtifactId()
       }
     stages{
       stage (build){

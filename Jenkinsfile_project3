@@ -1,8 +1,17 @@
 pipeline{
  agent any
+    environment{
+      pom_groupid=readMavenPom().getGroupId()
+      pom_artifactid=readMavenPom().getArtifactId()
+      pom_version=readMavenPom().getVersion()
+    }
    stages{ 
-     stage(){
+     stage('build'){
        steps{
+       echo "the groupid is ${pom_groupid}"
+       echo "the groupid is ${pom_artifactid}"
+       echo "the groupid is ${pom_version}"
+       sh label: '', script: 'mvn clean install package deploy'
        }
      }
    }

@@ -14,10 +14,6 @@ pipeline{
        sh label: '', script: 'mvn clean install package deploy'
        }
      }
-     stage("upload war"){
-      steps{
-      nexusArtifactUploader artifacts: [[artifactId: 'studentapp', classifier: '', file: 'target/studentapp-"${pom_version}".war', type: 'war']], credentialsId: 'nexus', groupId: 'com.jdevs', nexusUrl: '3.21.244.117:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'lenovo', version: '${pom_version}'
-    }
-  }
+   
  }
 }

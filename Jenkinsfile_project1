@@ -16,8 +16,8 @@ pipeline{
         }
        stage ("deployment to conatiner"){
            steps{
-              deploy adapters: [tomcat7(credentialsId: 'tomcat-user', path: '', url: 'http://18.216.148.192:9090/')], contextPath: null, war: 'target/studentapp-2.0.war' 
-           }
+              deploy adapters: [tomcat7(credentialsId: 'tomcat-user', path: '', url: 'http://18.216.148.192:9090/')], contextPath: null, war: 'target/studentapp-2.0.war'
         }
+       }
      }
 }

@@ -1,10 +1,16 @@
+def pom_value;
 pipeline{ 
   agent any
+    environment {
+       pom_version = readMavenPom().getVersion()
+      }
     stages{
       stage (build){
         steps{
           sh label: '', script: 'mvn clean install package'
+            echo "pom version is ${pom_version}"
            }
          }
+      
     }
 }

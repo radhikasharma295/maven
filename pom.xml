@@ -27,14 +27,14 @@
   </build>
    <distributionManagement>
         <repository>
-            <id>chennai</id>
+            <id>bangalore</id>
             <name>Internal Releases</name>
-            <url>http://18.217.62.18:8081/repository/radhika-release/</url>
+            <url>http://18.191.150.21:8081/repository/banaglore-release/</url>
         </repository>
         <snapshotRepository>
-            <id>chennai</id>
+            <id>bangalore</id>
             <name>Internal Snapshot Releases</name>
-            <url>http://18.217.62.18:8081/repository/radhika-snapshot/</url>
+            <url>http://18.191.150.21:8081/repository/bangalore-snapshot/</url>
         </snapshotRepository>
     </distributionManagement>
   <dependencies>

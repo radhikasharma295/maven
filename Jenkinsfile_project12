@@ -13,7 +13,7 @@ pipeline{
             echo "pom version is ${pom_version}"
             echo "pom artifact id is ${pom_artifact}"
             echo "pom group id is ${pom_groupid}"
-            echo "pom package name is ${om_pachaging}"
+            echo "pom package name is ${pom_pachaging}"
            }
          }
       

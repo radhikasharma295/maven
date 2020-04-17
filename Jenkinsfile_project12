@@ -15,6 +15,11 @@ pipeline{
             echo "pom group id is ${pom_groupid}"
             echo "pom package name is ${pom_pachaging}"
            }
+         } 
+        stage("upload war file"){
+         steps{
+          nexusArtifactUploader credentialsId: 'nexus', groupId: 'com.jdevs', nexusUrl: '3.16.81.102:8081', nexusVersion: 'nexus2', protocol: 'http', repository: 'banaglore-release/', version: '2.0'
          }
-      }
+       }
+    }
 }

@@ -15,6 +15,7 @@ pipeline{
        }
      }
      stage("upload war"){
+      steps{
       nexusArtifactUploader artifacts: [[artifactId: '${pom_artifactid}', classifier: '', file: 'target/studentapp-2.0.war', type: 'war']], credentialsId: 'nexus', groupId: '${pom_groupid}', nexusUrl: '3.21.244.117:8081', nexusVersion: 'nexus3', protocol: 'http', repository: 'lenovo', version: '${pom_version}'
    }
 }

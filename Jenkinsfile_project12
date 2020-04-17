@@ -1,14 +1,15 @@
-def pom_value;
 pipeline{ 
   agent any
     environment {
        pom_version = readMavenPom().getVersion()
+       pom_artifact = readMavenPom().getartifactId()
       }
     stages{
       stage (build){
         steps{
           sh label: '', script: 'mvn clean install package'
             echo "pom version is ${pom_version}"
+            echo "pom artifact id is ${pom_artifact}"
            }
          }
       

@@ -1,8 +1,5 @@
 pipeline{
    agent {label 'slave1'}
-      tools {
-      maven 'maven3'
-      }
       stages{
         stage (hello){
            steps{
